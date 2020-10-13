@@ -7,12 +7,12 @@ from simulation import *
 start = time.time()
 
 # simulation parameters
-N = 10
+N = 100
 L = 1.0
 alpha = 0.5
-dt = 0.1
+dt = 0.05
 gamma = 0.05
-n = 1000000
+n = 100000
 
 # thermal expansion coefficient simulation parameters
 average_start = int(0.5*n)
@@ -42,7 +42,7 @@ for i,T in enumerate(Ts):
     l = sim.l_hist[average_start:]
     l_ave += np.mean(l)
 
-  l_aves[i] = length_ave / repeats
+  l_aves[i] = l_ave / repeats
 
 # compute gradient
 
