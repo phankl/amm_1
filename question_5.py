@@ -47,7 +47,7 @@ for i,T in enumerate(Ts):
 # compute gradient
 
 # normalise with respect to chain length
-spacing_aves = length_aves / (L*(N-1))
+spacing_aves = l_aves / (L*(N-1))
 fit = np.polyfit(Ts, spacing_aves, 1)
 gradient = fit[0]
 offset = fit[1]
